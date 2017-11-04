@@ -63,11 +63,12 @@
      });
      wmsLayer2.addTo(mapa);
 	  
+     var wmsLayer3 = L.tileLayer.wms('http://geos.snitcr.go.cr/be/IGN_5/wms?', {
+     layers: 'hidrografia_5000'
+     });
+     wmsLayer3.addTo(mapa);    
 	    
-	    
-	    
-	    
-      
+	     
 	    
       // retorna un color con base en la cantidad de especies
       function color(d) {
@@ -115,7 +116,8 @@
       "OpenMapSurfer_Roads":OpenMapSurfer_Roads,
       "provincias_snit":wmsLayer,
       "Vias Publicas":wmsLayer1,
-      "Edificaciones obras publicas":wmsLayer2
+      "Edificaciones obras publicas":wmsLayer2,
+      "Hidrografia_5000":wmsLayer3
       };
       var overlays = {
       "Cantones de costa rica":cantonescr
