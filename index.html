@@ -48,13 +48,21 @@
       });
       OpenMapSurfer_Roads.addTo(mapa);
       
-    var wmsLayer = L.tileLayer.wms('http://geos.snitcr.go.cr/be/IGN_5/wms?', {
-    layers: 'limiteprovincial_5k'
-    });
-    wmsLayer.addTo(mapa);
+     var wmsLayer = L.tileLayer.wms('http://geos.snitcr.go.cr/be/IGN_5/wms?', {
+     layers: 'limiteprovincial_5k'
+     });
+     wmsLayer.addTo(mapa);
       
+     var wmsLayer1 = L.tileLayer.wms('http://geos.snitcr.go.cr/be/IGN_RI/wms?', {
+     layers: 'vias_publicas'
+     });
+     wmsLayer1.addTo(mapa);
+	  
       
-      
+	    
+	    
+	    
+	    
       
 	    
       // retorna un color con base en la cantidad de especies
@@ -101,7 +109,8 @@
       "OpenTopoMap":OpenTopoMap,
       "OpenStreetMap_France":OpenStreetMap_France,
       "OpenMapSurfer_Roads":OpenMapSurfer_Roads,
-      "provincias_snit":wmsLayer
+      "provincias_snit":wmsLayer,
+      "Vias Publicas":wmsLayer1
       };
       var overlays = {
       "Cantones de costa rica":cantonescr
