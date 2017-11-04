@@ -58,7 +58,11 @@
      });
      wmsLayer1.addTo(mapa);
 	  
-      
+     var wmsLayer2 = L.tileLayer.wms('http://geos.snitcr.go.cr/be/IGN_NG/wms?', {
+     layers: 'edificacionesobraspublicas_25k'
+     });
+     wmsLayer2.addTo(mapa);
+	  
 	    
 	    
 	    
@@ -110,7 +114,8 @@
       "OpenStreetMap_France":OpenStreetMap_France,
       "OpenMapSurfer_Roads":OpenMapSurfer_Roads,
       "provincias_snit":wmsLayer,
-      "Vias Publicas":wmsLayer1
+      "Vias Publicas":wmsLayer1,
+      "Edificaciones obras publicas":wmsLayer2
       };
       var overlays = {
       "Cantones de costa rica":cantonescr
