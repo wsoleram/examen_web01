@@ -29,9 +29,12 @@
         attribution: '<a href="http://www.openstreetmap.org/">OpenStreetMap</a>'
       });
       osm.addTo(mapa);
-      
-      
-      
+	    
+      var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+	 attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+      });
+      Esri_WorldImagery.addTo(mapa);    
+              
       var OpenStreetMap_France = L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
 	    maxZoom: 20,
 	    attribution: '&copy; Openstreetmap France | &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -113,7 +116,7 @@
       	    
       var baseLayers = {
       "OpenStreetMap": osm,
-    
+      "Esri_WorldImagery":Esri_WorldImagery,
       "OpenStreetMap_France":OpenStreetMap_France,
       "OpenMapSurfer_Roads":OpenMapSurfer_Roads,
       "Hydda_Full":Hydda_Full,
