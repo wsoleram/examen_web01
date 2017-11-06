@@ -47,6 +47,11 @@
 	    attribution: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       });
       OpenMapSurfer_Roads.addTo(mapa);
+	    
+	var Hydda_Full = L.tileLayer('https://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', {
+	maxZoom: 18,
+	attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        });
       
      var wmsLayer = L.tileLayer.wms('http://geos.snitcr.go.cr/be/IGN_5/wms?', {
      layers: 'limiteprovincial_5k'
@@ -114,6 +119,7 @@
       "OpenTopoMap":OpenTopoMap,
       "OpenStreetMap_France":OpenStreetMap_France,
       "OpenMapSurfer_Roads":OpenMapSurfer_Roads,
+      "Hydda_Full":Hydda_Full,
       "provincias_snit":wmsLayer,
       "Vias Publicas":wmsLayer1,
       "Edificaciones obras publicas":wmsLayer2,
